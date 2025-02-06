@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="main-container">
+    <h2>Class Attendance System</h2>
+
+    <div class="form-container show">
+        <form  id="form" action="QR.html" method="post">
+        <select name="Class" id="Class">
+            <option value="" disabled selected hidden>Class...</option>
+            <option value="1r">1R</option>
+            <option value="2R">2R</option>
+            <option value="3R">3R</option>
+            <option value="4R">4R</option>
+        </select>
+        <select name="Subject" id="Subject">
+            <option value="" disabled selected hidden>Subject...</option>
+            <option value="OS">OS</option>
+            <option value="TOC">TOC</option>
+            <option value="AI">AI</option>
+            <option value="M&ALP">M&ALP</option>
+            <option value="DCN">DCN</option>
+            <option value="DCN LAB">DCN LAB</option>
+            <option value="OS LAB">OS LAB</option>
+            <option value="M&ALP LAB">M&ALP LAB</option>
+            <option value="CSKILL LAB">CSKILL LAB</option>
+        </select>
+        <input type="date" name="date" id="date" placeholder="Date">
+        <button type="submit" id ="open-qr-btn" name="submit">Generate QR</button>
+        </form>
+        
+    </div>
+
+    <div class="qr-container hide" id="qr-container">
+        <p>Scan this QR to input your roll number:</p>
+            <div class="qr"></div>
+            <button id="close-qr-btn">Close QR
+                and Show Results</button>
+    </div>
+
+</div>
+        <script src="script.js"></script>
+</body>
+
+</html>
